@@ -1,13 +1,13 @@
-import { compare, hash } from 'bcrypt';
-import { sign } from 'jsonwebtoken';
-import { EntityRepository, Repository } from 'typeorm';
-import { SECRET_KEY } from '@config';
-import { CreateUserDto } from '@dtos/users.dto';
-import { UserEntity } from '@entities/users.entity';
-import { HttpException } from '@exceptions/HttpException';
-import { DataStoredInToken, TokenData } from '@interfaces/auth.interface';
-import { User } from '@interfaces/users.interface';
-import { isEmpty } from '@utils/util';
+import { compare, hash } from "bcrypt";
+import { sign } from "jsonwebtoken";
+import { EntityRepository, Repository } from "typeorm";
+import { SECRET_KEY } from "@config";
+import { CreateUserDto } from "@dtos/users.dto";
+import { UserEntity } from "@entities/users.entity";
+import { HttpException } from "@exceptions/HttpException";
+import { DataStoredInToken, TokenData } from "@interfaces/auth.interface";
+import { User } from "@interfaces/users.interface";
+import { isEmpty } from "@utils/util";
 
 @EntityRepository()
 class AuthService extends Repository<UserEntity> {
